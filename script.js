@@ -1,7 +1,8 @@
 let boxElement=document.querySelectorAll('.box')
 boxElement.forEach((box)=>{
-    box.addEventListener('click',function(){
+    box.addEventListener('click',function func(){
         playGame(box)
+        box.removeEventListener('click',func)
     });
 })
 let player="X"
